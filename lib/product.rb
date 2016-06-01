@@ -33,13 +33,13 @@ class Product
   end
 
   def self.in_stock
-  products_in_stock=[]
+    products_in_stock=[]
     @@products.each do |product|
       if product.in_stock?
         products_in_stock<<product
       end
     end
-  return products_in_stock
+    return products_in_stock
   end
 
 
