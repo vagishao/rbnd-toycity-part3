@@ -53,7 +53,6 @@ class Product
     product.stock=0
     puts "Cleared stock of #{product_name}"
   end
-
   private
 
   def add_to_products
