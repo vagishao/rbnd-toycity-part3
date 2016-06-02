@@ -1,6 +1,12 @@
 How long did you spend working on this project?
-
+It took me 5 days to complete this project.
 
 What was the most rewarding challenge you conquered?
+Learning how to create classes, objects and class methods
+
 What two additional features did you build? Why?
+1. Print all Products and Customers (product.rb:line 47:to_s(overriden))
+2. Clearing a Product's stock and printing its name. (product.rb:line 51: clear_stock_of_product )
+
 Where do you still have room to grow?
+I need to practice more.
