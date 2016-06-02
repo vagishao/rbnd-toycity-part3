@@ -49,4 +49,8 @@ class Customer
     end
     return false
   end
+
+  def to_s
+    "Customer: #{@name}"
+  end
 end

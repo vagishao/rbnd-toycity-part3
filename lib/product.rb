@@ -20,6 +20,7 @@ class Product
     @@products
   end
 
+
   def self.find_by_title(title)
     @@products.each do |product|
       if  title==product.title
@@ -44,7 +45,13 @@ class Product
 
 
   def to_s
-    "product type is #{@title}"
+    "Product: #{@title}"
+  end
+
+  def self.clear_stock_of_product(product_name)
+    product=find_by_title(product_name)
+    product.stock=0
+    puts "Cleared stock of #{product_name}"
   end
 
   private
@@ -71,3 +78,4 @@ class Product
   end
 
 end
+

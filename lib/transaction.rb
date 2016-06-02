@@ -9,7 +9,6 @@ class Transaction
     @id = @@id
     @@id+=1
 
-    @product.stock =@product.stock-1
     add_transaction
   end
 
@@ -17,13 +16,28 @@ class Transaction
     @@transaction
   end
 
+  def self.find(index)
+    @@transaction[index-1]
+
+  end
+
   def add_transaction
+
+    val = is_product_out_of_stock?
+    if val
+      raise OutOfStockError,"#{@product} is out of stock."
+    end
+    @product.stock =@product.stock-1
     @@transaction<<self
   end
 
-  def self.find(index)
-        @@transaction[index-1]
+  def is_product_out_of_stock?
 
-      end
+    @product.stock==0
 
   end
+
+end
+
+
+
